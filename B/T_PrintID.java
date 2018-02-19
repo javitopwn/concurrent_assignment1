@@ -7,8 +7,7 @@ package concurrent_assignment1.B;
  *
  * @author yournamehere
  */
-
-public class T_PrintID {
+public class T_PrintID extends Thread{
     int ID;
     public T_PrintID(int x){
         this.ID=x;
