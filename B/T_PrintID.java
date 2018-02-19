@@ -9,5 +9,13 @@ package concurrent_assignment1.B;
  */
 
 public class T_PrintID {
-
+    int ID;
+    public T_PrintID(int x){
+        this.ID=x;
+    }
+    public void run(){
+        for (int i = 0; i < 10; i++) {
+            System.out.println(this.ID);
+        }
+    }
 }
