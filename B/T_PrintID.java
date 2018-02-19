@@ -1,20 +1,18 @@
-package concurrent_assignment1.B;
-
-/**
- * Create class T_PrintID which extends Thread:
- *	- It must contain a variable ID whose value is first set through the class constructor.
- *	- Method run() has a loop which iterates 10 times displaying ID.
- *
- * @author yournamehere
- */
-public class T_PrintID extends Thread{
+public class T_PrintID extends Thread implements Runnable {
     int ID;
     public T_PrintID(int x){
         this.ID=x;
     }
+    @Override
     public void run(){
         for (int i = 0; i < 10; i++) {
             System.out.println(this.ID);
-        }
+            try {
+                Thread.sleep((int)(Math.random()*1000));
+            } catch (InterruptedException ex) {
+                System.out.println(ex.toString());
+            }
+       
     }
+}
 }
