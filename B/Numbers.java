@@ -16,10 +16,10 @@ public class Numbers {
     T_PrintID o3=new T_PrintID(3);
     T_PrintID o4=new T_PrintID(4);
     T_PrintID o5=new T_PrintID(5);
-    o1.run();
-    o2.run();
-    o3.run();
-    o4.run();
-    o5.run();
+    o1.start();
+    o2.start();
+    o3.start();
+    o4.start();
+    o5.start();
     }
 }
