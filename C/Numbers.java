@@ -11,11 +11,13 @@ package concurrent_assignment1.C;
 public class Numbers {
     
     public static void main(String[] args) {
-    R_PrintID o1=new R_PrintID(1);
-    R_PrintID o2=new R_PrintID(2);
-    R_PrintID o3=new R_PrintID(3);
-    R_PrintID o4=new R_PrintID(4);
-    R_PrintID o5=new R_PrintID(5);
+    
+        Thread t1 = new Thread(new R_PrintID(1));
+        Thread t2 = new Thread(new R_PrintID(2));
+        Thread t3 = new Thread(new R_PrintID(3));
+        Thread t4 = new Thread(new R_PrintID(4));
+        Thread t5 = new Thread(new R_PrintID(5));
+        
     o1.start();
     o2.start();
     o3.start();
