@@ -16,7 +16,7 @@ public class Lazy extends Thread {
     
     @Override
     public void run(){        
-        int ran=(int)(Math.random()*8+2);
+        int ran=(int)(Math.random()*7+2);
         int ran2;        
         for (int i = 0; i < ran && !Thread.currentThread().isInterrupted(); i++) 
         {   
