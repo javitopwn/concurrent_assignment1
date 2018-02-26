@@ -16,25 +16,28 @@ package concurrent_assignment1.D;
 
 
 public class Hurry {
+    
     public static void main(String[] args) throws InterruptedException{
-        Thread thread = Thread.currentThread();
+        
         Lazy lazy= new Lazy();
         lazy.start();
-        //lazy.join();
-        for (int i = 0; i < 5; i++) {
+        
+        for (int i = 0; i < 5 && lazy.isAlive(); i++) {
             
             System.out.println("Aren’t you ready yet?\n");
-            if(!lazy.isAlive()){
-                System.out.println("At last, a turtle runs rings round you!\n");
-                break;
-            }
-            thread.sleep(1000);
+            
+            Thread.sleep(1000);
         }
         if(lazy.isAlive()){
         System.out.println("You are resting in your laurels… and I am leaving!\n");
         lazy.interrupt();
-        lazy.join();
         }
+        else{
+        System.out.println("At last, a turtle runs rings round you!\n");
+            }   
+        
+        lazy.join();
         
     }
+   
 }
