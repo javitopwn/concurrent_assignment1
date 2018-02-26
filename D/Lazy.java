@@ -17,10 +17,11 @@ public class Lazy extends Thread implements Runnable{
     @Override
     public void run(){        
         int ran=(int)(Math.random()*8+2);
-        int ran2=(int)(Math.random()*2);
-        
+                
         for (int i = 0; i < ran; i++) 
         {   
+            int ran2=(int)(Math.random()*2);
+
             if(this.isInterrupted())System.out.println("That’s not cricket, please play the game!\n");
             try {
                 Thread.sleep(1000);
@@ -29,9 +30,9 @@ public class Lazy extends Thread implements Runnable{
             }
                 switch(ran2)
                 {
-                case 0 : System.out.println("I am dressing up...\n");
-                case 1 : System.out.println("Just a sec, please...\n");
-                case 2 : System.out.println("These clothes do not suit me...\n");
+                case 0 : System.out.println("I am dressing up...\n"); break;
+                case 1 : System.out.println("Just a sec, please...\n");break;
+                case 2 : System.out.println("These clothes do not suit me...\n");break;
                 }                
         }
         if(!this.isInterrupted())System.out.println("I am ready, the early bird catches the worm!\n");
