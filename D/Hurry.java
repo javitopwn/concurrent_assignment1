@@ -21,14 +21,14 @@ public class Hurry {
         
         Lazy lazy= new Lazy();
         lazy.start();
-        
-        for (int i = 0; i < 5 && lazy.isAlive(); i++) {
+        int i;
+        for (i = 0; i < 5 && lazy.isAlive(); i++) {
             
             System.out.println("Aren’t you ready yet?\n");
             
             Thread.sleep(1000);
         }
-        if(lazy.isAlive()){
+        if(i==5){
         System.out.println("You are resting in your laurels… and I am leaving!\n");
         lazy.interrupt();
         }
@@ -41,3 +41,4 @@ public class Hurry {
     }
    
 }
+
