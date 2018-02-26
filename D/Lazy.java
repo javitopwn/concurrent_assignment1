@@ -11,14 +11,13 @@ package concurrent_assignment1.D;
  * @author Viktitors
  *
  */
-
 public class Lazy extends Thread {
     
     @Override
     public void run(){        
         int ran=(int)(Math.random()*7+2);
         int ran2;        
-        for (int i = 0; i < ran && !Thread.currentThread().isInterrupted(); i++) 
+        for (int i = 0; i < 2 && !Thread.currentThread().isInterrupted(); i++) 
         {   
             ran2=(int)(Math.random()*3+1);
             switch(ran2)
