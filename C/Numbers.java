@@ -12,11 +12,11 @@ public class Numbers {
     
     public static void main(String[] args) {
     
-        Thread t1 = new Thread(new R_PrintID(1));
-        Thread t2 = new Thread(new R_PrintID(2));
-        Thread t3 = new Thread(new R_PrintID(3));
-        Thread t4 = new Thread(new R_PrintID(4));
-        Thread t5 = new Thread(new R_PrintID(5));
+        Thread o1 = new Thread(new R_PrintID(1));
+        Thread o2 = new Thread(new R_PrintID(2));
+        Thread o3 = new Thread(new R_PrintID(3));
+        Thread o4 = new Thread(new R_PrintID(4));
+        Thread o5 = new Thread(new R_PrintID(5));
         
     o1.start();
     o2.start();
